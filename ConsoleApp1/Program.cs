@@ -1,4 +1,5 @@
 ﻿using System.IO.IsolatedStorage;
+using System.Security.Cryptography.X509Certificates;
 
 namespace ConsoleApp1
 {
@@ -137,6 +138,21 @@ namespace ConsoleApp1
             Console.WriteLine("Odwrócona tablica: " + string.Join(", ", Z7_TablicaLiczb));
 
             // Zadanie 8
+
+            int[,] Z8_Macierz = new int[3, 3]
+            {
+                {10, 5, 7},
+                {18, 43, 2},
+                {4, 8, 35},
+            };
+
+            int Dodaj()
+            {
+                int Z8_Przekątna = Z8_Macierz[2, 2] + Z8_Macierz[1, 1] + Z8_Macierz[0, 0];
+                return Z8_Przekątna;
+            }
+            Console.WriteLine("");
+            Console.WriteLine("Przekątna macierzy wynosi " + Dodaj() + ".");
         }
     }
 }
