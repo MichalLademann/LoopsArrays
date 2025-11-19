@@ -1,4 +1,6 @@
-﻿namespace ConsoleApp1
+﻿using System.IO.IsolatedStorage;
+
+namespace ConsoleApp1
 {
     internal class Program
     {
@@ -88,8 +90,53 @@
             Console.WriteLine("Tablica liczb dla zadania 5: 3, 5, 8, 12, 17");
             Console.WriteLine("");
             Console.WriteLine("Tablica B (Pomnożona tablica A razy 2): " + string.Join(", ", Z5_B));
+            Console.WriteLine("");
+
+            // Zadanie 6
+
+            int[] Z6_TablicaLiczb = [ 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 ];
+            Console.Write("Podaj liczbę, której szukasz w tablicy (1-20): ");
+            
+            string? Z6_Input = Console.ReadLine();
+
+            bool found = false;
+
+            for (int i = 0; i < Z6_TablicaLiczb.Length; i++)
+            {
+                if (Z6_Input == Z6_TablicaLiczb[i].ToString())
+                {
+                    Console.WriteLine("Znaleziono liczbę " + Z6_Input + " na pozycji " + i + " w tablicy.");
+                    found = true;
+                }
+            }
+
+            if (!found)
+            {
+                Console.WriteLine("Nie znaleziono liczby " + Z6_Input + " w tablicy.");
+            }
+
+            Console.WriteLine("");
 
 
+            // Zadanie 7
+
+            int[] Z7_TablicaLiczb = [2, 6, 8, 12, 14, 18, 20];
+            Console.WriteLine("Tablica liczb dla zadania 7: " + string.Join(", ", Z7_TablicaLiczb));
+            
+
+            for (int i = 0; i < (Z7_TablicaLiczb.Length / 2); i++)
+            {
+                int j = Z7_TablicaLiczb.Length - 1 - i;
+                int Z7_temp = Z7_TablicaLiczb[i];
+                Z7_TablicaLiczb[i] = Z7_TablicaLiczb[j];
+                Z7_TablicaLiczb[j] = Z7_temp;
+                
+            }
+
+            Console.WriteLine("");
+            Console.WriteLine("Odwrócona tablica: " + string.Join(", ", Z7_TablicaLiczb));
+
+            // Zadanie 8
         }
     }
 }
