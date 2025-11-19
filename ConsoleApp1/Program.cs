@@ -8,7 +8,7 @@
             int Z1_SumaLiczb = 0;
             int Z1_LiczbaSum = 0;
 
-            Console.WriteLine("Tablica liczb dla zadania 1: 5, 10, 15, 20, 25");
+            Console.WriteLine("Tablica liczb dla zadania 1: " + string.Join(", ", Z1_TablicaLiczb));
             Console.WriteLine("");
 
             foreach (int Z1_LiczbaCalkowita in Z1_TablicaLiczb)
@@ -29,7 +29,7 @@
 
             Z2_LCMin = Z2_TablicaLiczb.Min();
             Z2_LCMax = Z2_TablicaLiczb.Max();
-            Console.WriteLine("Tablica liczb dla zadania 2: 20, 15, 10, 25, 5");
+            Console.WriteLine("Tablica liczb dla zadania 2: " + string.Join(", ", Z2_TablicaLiczb));
             Console.WriteLine("");
             Console.WriteLine("Najmniejsza liczba w tablicy: " + Z2_LCMin);
             Console.WriteLine("Największa liczba w tablicy: " + Z2_LCMax);
@@ -38,6 +38,8 @@
 
             string[] Z3_LosoweImiona = ["Tymek", "Lesław", "Ignacy", "Daniil", "Romuald"];
 
+            Console.WriteLine("");
+            Console.WriteLine("Tablica imion dla zadania 3: " + string.Join(", ", Z3_LosoweImiona));
             Console.WriteLine("");
 
             for (int i = Z3_LosoweImiona.Length - 1; i >= 0; i--)
@@ -66,24 +68,27 @@
                     Z4_Nieparzysta++;
                 }
             }
-            Console.WriteLine("Tablica liczb dla zadania 4: 1, 2, 3, 4, 5, 6, 8, 10");
+            Console.WriteLine("Tablica liczb dla zadania 4: " + string.Join(", ", Z4_TablicaLiczb));
             Console.WriteLine("");
             Console.WriteLine("Liczba liczb parzystych: " + Z4_Parzysta);
             Console.WriteLine("Liczba liczb nieparzystych: " + Z4_Nieparzysta);
+            Console.WriteLine("");
 
             // Zadanie 5
 
-            int[] Z5_A = [3, 5, 8, 12, 17];
+            int[] Z5_A = { 3, 5, 8, 12, 17 };
 
             int[] Z5_B = new int[Z5_A.Length];
 
             for (int i = 0; i < Z5_A.Length; i++)
             {
-                Z5_B[i] = (Convert.ToInt32(Z5_A[i] * 2));
+                Z5_B[i] = Z5_A[i] * 2;
             }
+
             Console.WriteLine("Tablica liczb dla zadania 5: 3, 5, 8, 12, 17");
             Console.WriteLine("");
-            Console.WriteLine("Tablica B (Pomnożona tablica A razy 2): " + Z5_A);
+            Console.WriteLine("Tablica B (Pomnożona tablica A razy 2): " + string.Join(", ", Z5_B));
+
 
         }
     }
