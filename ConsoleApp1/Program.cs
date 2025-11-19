@@ -146,13 +146,21 @@ namespace ConsoleApp1
                 {4, 8, 35},
             };
 
-            int Dodaj()
+            int DodajPrzekatna()
             {
                 int Z8_Przekątna = Z8_Macierz[2, 2] + Z8_Macierz[1, 1] + Z8_Macierz[0, 0];
                 return Z8_Przekątna;
             }
             Console.WriteLine("");
-            Console.WriteLine("Przekątna macierzy wynosi " + Dodaj() + ".");
+            Console.WriteLine("Przekątna macierzy wynosi " + DodajPrzekatna() + ".");
+
+            int DodajAntyprzekatna()
+            {
+                int Z8_Antyprzekątna = Z8_Macierz[0, 2] + Z8_Macierz[1, 1] + Z8_Macierz[2, 0];
+                return Z8_Antyprzekątna;
+            }
+            Console.WriteLine("");
+            Console.WriteLine("Antyprzekątna macierzy wynosi " + DodajAntyprzekatna() + ".");
         }
     }
 }
